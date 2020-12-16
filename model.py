@@ -11,8 +11,6 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-import warnings
-warnings.filterwarnings("ignore")
 from sklearn import preprocessing
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.metrics import confusion_matrix
@@ -92,10 +90,10 @@ from sklearn.svm import SVC
 classifier = SVC()
 classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
-from sklearn.metrics import confusion_matrix
+
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
-from sklearn.metrics import accuracy_score
+
 print(accuracy_score(y_test, y_pred))
 
 X=StandardScaler().fit_transform(X)
