@@ -22,7 +22,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.svm import SVC
 import pickle
 
-df = pd.read_csv('C:\\Users\\Shrita\\Desktop\\AI_Algo\\startup.csv')
+df = pd.read_csv('C:\\Users\\Shrita\\Desktop\\AI_Algo\\Model Delivery\\startup.csv')
 
 a = 'California'
 b = 'New York'
