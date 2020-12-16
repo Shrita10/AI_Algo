@@ -95,9 +95,9 @@ Based on the rejections, a company will be motivated to come up with new product
 <h2 class='enter_val'>Does the company have advertisement label?(Type 1 for YES and 0 for NO)</h2>
 <input type = 'number'  class = 'inputs' name = 'labels' min="0" max="1"/>
 <h2 class='enter_val'>Please enter age of the company when it received it's first funding</h2>
-<input class = 'inputs' type = 'double' name = 'age_first_funding_year'/>
+<input class = 'inputs' type="number" step="any" name = 'age_first_funding_year'/>
 <h2 class='enter_val'>Please enter age of the company when it received it's first milestone</h2>
-<input class = 'inputs' type = 'double' name = 'age_first_milestone_year'  />
+<input class = 'inputs' type="number" step="any" name = 'age_first_milestone_year'  />
 <h2 class='enter_val'>The relationship that the companies have with their clients(Please enter a value between 1 to 100)</h2>
 <input class = 'inputs'type = 'number' name = 'relationships' min="1" max="100"/>
 <h2 class='enter_val'>Number of significant events within the startup ecosystem(Milestones)</h2>
@@ -105,7 +105,7 @@ Based on the rejections, a company will be motivated to come up with new product
 <h2 class='enter_val'>Did the company receive the second round of funding? (Type 1 for YES and 0 for NO)</h2>
 <input class = 'inputs' type = 'number' name = 'Round B?' min="0" max="1"/>
 <h2 class='enter_val'>Mention the average of participants</h2>
-<input class = 'inputs' type = 'double' name = 'avg_participants'/>
+<input class = 'inputs' input type="number" step="any" name = 'avg_participants'/>
 <h2 class='enter_val'>Is the company listed as top 500?(Type 1 for YES and 0 for NO)</h2>
 <input class = 'inputs' type = 'number' name = 'is_top500' min="0" max="1" required = 'required'/>
 <h1 class='result1'>{{ prediction_text }}</h1>
