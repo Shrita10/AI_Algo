@@ -6,12 +6,14 @@
 <style>
 
 body{ 
+  vertical-align: top;
   background-image: linear-gradient(to right,teal,mediumaquamarine, darkcyan);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   font-family:sans-serif;
   margin-top:40px;
+  text-align:center;
     }
 .radio_lab{
   color:rgb(47, 79, 79);
@@ -20,7 +22,7 @@ body{
 
 form { max-width:420px; margin:50px auto; }
 .form1{ 
-  max-width:1000px; margin:50px auto;
+  max-width:1500px; margin:50px auto;
   position:relative;
   color: #587e76;
   }
@@ -73,21 +75,27 @@ form { max-width:420px; margin:50px auto; }
   color:rgb(47, 79, 79);
 }
 .result1{
+  vertical-align: top;
   left:0px;
   top:-37px;
   line-height:40px;
   width:480px;
   border-radius:6px;
   font-size:23px;
-  color: cyan;
+  color: yellow;
 }
 .login{
-  position:relative;
+
 }
 .inline-block-child{
+vertical-align: top;
   display: inline-block;
   vertical-align: top;
-  padding: 20px;
+  padding: 60px;
+  
+}
+.button{
+  width:1000px;
 }
 </style>
 </head>
@@ -95,13 +103,9 @@ form { max-width:420px; margin:50px auto; }
 <body>
 <div class="login">
 	<center><h1 class='desc1'>Start-up Success Prediction</h1></center>
-
-<div class="child inline-block-child" style= "text-align:left"> 
 <h3 class='form1'>Investors often suffer from huge losses for investing in the wrong company. In real life, it is daunting for investors to predict success for a start-up. My model helps to predict the success rate of the start-up companies based on various parameters like location, funding, type of business, etc. Using this model, investors will get a fair idea on which companies they should target for investment. A company will be considered a success based on the company’s mergers and acquisitions. A company will be considered a failure if it was forced to shut down.
 Based on the rejections, a company will be motivated to come up with new products and new solutions.
-
 </h3>
-</div>
 <div class="child inline-block-child"> 
 <form action="{{url_for('predict')}}"method = "post">
 <h2 class='enter_val'>Does the company have advertisement label?</h2>
@@ -113,12 +117,16 @@ Based on the rejections, a company will be motivated to come up with new product
 <h2 class='enter_val'>Enter age of the company when it received it's first funding</h2>
 <input class = 'inputs' type="number" step="any" name = 'age_first_funding_year'/>
 
+
 <h2 class='enter_val'>Enter age of the company when it received it's first milestone</h2>
 <input class = 'inputs' type="number" step="any" name = 'age_first_milestone_year'  />
 
 <h2 class='enter_val'>Enter the relationship that the companies have with their clients(Please enter a value between 1 to 100)</h2>
 <input class = 'inputs'type = 'number' name = 'relationships' min="1" max="100"/>
-
+</div>
+<div class="child inline-block-child" style= "text-align:right"> 
+<br>
+<br>
 <h2 class='enter_val'>Number of significant events within the startup ecosystem(Milestones)?</h2>
 <input class = 'inputs' type = 'number' name = 'milestones'/>
 
@@ -139,10 +147,10 @@ Based on the rejections, a company will be motivated to come up with new product
 <input class='radio' id="no1" value="no1" type="radio" name="options1" >
 <label class='radio_lab' for="no1">No</label>
 
-<h1 class='result1'>{{ prediction_text }}</h1>
-<br>
-<br>
-<button type = "submit"> Predict</button>
+</div>
+<center> <h1 class='result1'>{{ prediction_text }}</h1>
+
+<button type = "submit" class='button'> Predict</button> </center>
 </form>
 <br>
 <br>
