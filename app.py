@@ -16,7 +16,7 @@ le = pickle.load(open('le.pkl','rb'))
 @app.route('/')
 
 def home():
-    return render_template('index.html')
+    return render_template('untitled1.html')
 
 @app.route('/predict',methods = ['POST'])
 
@@ -47,7 +47,7 @@ def predict():
     else:
         out  = 'FAIL'
     
-    return render_template('index.html',prediction_text = '**There is a greater probability for the startup to {}, according to the inputs**'.format(out))
+    return render_template('untitled1.html',prediction_text = '**There is a greater probability for the startup to {}, according to the inputs**'.format(out))
 
 if __name__ == "__main__":
     app.run(debug=True)
