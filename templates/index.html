@@ -33,14 +33,14 @@ vertical-align: top;
   border-radius: 5px;
   line-height: 22px;
   background-color: mediumturquoise;
-  border:5px solid rgb(47, 79, 79);
+  border:2px solid rgb(47, 79, 79);
   transition: all 0.3s;
   padding: 13px;
-  width:100%;
+  width:70%;
   box-sizing: border-box;
   outline:0;
   }
-.inputs:focus { border:7px solid #CC4949; }  
+.inputs:focus { border:2px solid #CC4949; }  
   [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   width: 100%;
@@ -62,6 +62,7 @@ vertical-align: top;
   line-height:40px;
   border-radius:6px;
   font-size:20px;
+  width:100%
   color:rgb(47, 79, 79);
 }
 .desc1{
@@ -81,9 +82,8 @@ vertical-align: top;
 vertical-align: top;
 }
 .inline-block-child{
-
   display: inline-block;
-  padding: 90px;
+  padding: 20px;
   vertical-align: top;
 }
 .button{
@@ -114,7 +114,7 @@ Based on the rejections, a company will be motivated to come up with new product
 </div>
 
 <div class="child inline-block-child" style= "text-align:right"> 
-<center>
+
 <h2 class='enter_val'>Number of significant events within the startup ecosystem(Milestones)?</h2>
 <input class = 'inputs' type = 'number' min = "0" name = 'milestones'/>
 <h2 class='enter_val'>Did the company receive the second round of funding?</h2>
@@ -123,13 +123,13 @@ Based on the rejections, a company will be motivated to come up with new product
 <input class='radio' id="no2" value="no2" type="radio" name="options2" >
 <label class='radio_lab' for="no2">No</label>
 <h2 class='enter_val'>Mention the average of employees in the company</h2>
-<input class = 'inputs' input type="number" step="any" min = "0" name = 'avg_participants'/>
+<input class = 'inputs' type="number" step="any" min = "0" name = 'avg_participants'/>
 <h2 class='enter_val'>Is the company listed as top 500?</h2>
 <input class='radio' id="yes1" value="yes1" type="radio" name="options1" >
 <label class='radio_lab' for="yes1">Yes</label>
 <input class='radio' id="no1" value="no1" type="radio" name="options1" >
 <label class='radio_lab' for="no1">No</label>
-</center>
+
 </div>
 <center> <h1 class='result1'>{{ prediction_text }}</h1>
 <br>
@@ -138,6 +138,6 @@ Based on the rejections, a company will be motivated to come up with new product
 <br>
 <br>
 </div>
-</div>
+
 </body>
 </html>
