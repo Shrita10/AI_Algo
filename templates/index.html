@@ -6,13 +6,12 @@
 <style>
 
 body{ 
-  vertical-align: top;
   background-image: linear-gradient(to right,teal,mediumaquamarine, darkcyan);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   font-family:sans-serif;
-  margin-top:40px;
+
   text-align:center;
     }
 .radio_lab{
@@ -20,9 +19,10 @@ body{
   }
 .radio_lab:hover, radio_label:active{ color:#CC4949; }  
 
-form { max-width:420px; margin:50px auto; }
+form { max-width:420px; auto; }
 .form1{ 
-  max-width:1500px; margin:50px auto;
+vertical-align: top;
+  max-width:1500px;
   position:relative;
   color: #587e76;
   }
@@ -54,7 +54,6 @@ form { max-width:420px; margin:50px auto; }
   padding-top:10px;
   padding-bottom:10px;
   transition: all 0.3s;
-  margin-top:-4px;
   font-weight:700;
 }
   [type="submit"]:hover { background:#CC4949;}
@@ -72,10 +71,10 @@ form { max-width:420px; margin:50px auto; }
   color:rgb(169, 92, 59);
 }
 .desc1{
+vertical-align: top;
   color:rgb(47, 79, 79);
 }
 .result1{
-  vertical-align: top;
   left:0px;
   top:-37px;
   line-height:40px;
@@ -86,13 +85,13 @@ form { max-width:420px; margin:50px auto; }
 }
 .login{
 
+vertical-align: top;
 }
 .inline-block-child{
-vertical-align: top;
+
   display: inline-block;
-  vertical-align: top;
   padding: 60px;
-  
+  vertical-align: top;
 }
 .button{
   width:1000px;
@@ -103,9 +102,9 @@ vertical-align: top;
 <body>
 <div class="login">
 	<center><h1 class='desc1'>Start-up Success Prediction</h1></center>
-<h3 class='form1'>Investors often suffer from huge losses for investing in the wrong company. In real life, it is daunting for investors to predict success for a start-up. My model helps to predict the success rate of the start-up companies based on various parameters like location, funding, type of business, etc. Using this model, investors will get a fair idea on which companies they should target for investment. A company will be considered a success based on the company’s mergers and acquisitions. A company will be considered a failure if it was forced to shut down.
+<center><h3 class='form1'>Investors often suffer from huge losses for investing in the wrong company. In real life, it is daunting for investors to predict success for a start-up. My model helps to predict the success rate of the start-up companies based on various parameters like location, funding, type of business, etc. Using this model, investors will get a fair idea on which companies they should target for investment. A company will be considered a success based on the company’s mergers and acquisitions. A company will be considered a failure if it was forced to shut down.
 Based on the rejections, a company will be motivated to come up with new products and new solutions.
-</h3>
+</h3><center>
 <div class="child inline-block-child"> 
 <form action="{{url_for('predict')}}"method = "post">
 <h2 class='enter_val'>Does the company have advertisement label?</h2>
@@ -120,9 +119,9 @@ Based on the rejections, a company will be motivated to come up with new product
 <h2 class='enter_val'>Enter the relationship that the companies have with their clients(Please enter a value between 1 to 100)</h2>
 <input class = 'inputs'type = 'number' name = 'relationships' min="1" max="100"/>
 </div>
+
 <div class="child inline-block-child" style= "text-align:right"> 
-<br>
-<br>
+<center>
 <h2 class='enter_val'>Number of significant events within the startup ecosystem(Milestones)?</h2>
 <input class = 'inputs' type = 'number' name = 'milestones'/>
 <h2 class='enter_val'>Did the company receive the second round of funding?</h2>
@@ -137,6 +136,7 @@ Based on the rejections, a company will be motivated to come up with new product
 <label class='radio_lab' for="yes1">Yes</label>
 <input class='radio' id="no1" value="no1" type="radio" name="options1" >
 <label class='radio_lab' for="no1">No</label>
+</center>
 </div>
 <center> <h1 class='result1'>{{ prediction_text }}</h1>
 
