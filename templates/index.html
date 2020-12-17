@@ -13,14 +13,6 @@ body{
   font-family:sans-serif;
   margin-top:40px;
     }
-.radio{
-  color: red;
-  display: block;
-  float: left;
-  width: 100%;
-  height: 20px;
-  border-bottom: 1px solid #333;
-}
 .radio_lab{
   color:rgb(47, 79, 79);
   }
@@ -105,6 +97,7 @@ Based on the rejections, a company will be motivated to come up with new product
 
 <form action="{{url_for('predict')}}"method = "post">
 <h1 class='desc1' > Start-up Success Prediction</h1>
+
 <h2 class='enter_val'>Does the company have advertisement label?</h2>
 <input class='radio' id="yes" value="yes" type="radio" name="options" >
 <label class='radio_lab' for="yes">Yes</label>
@@ -124,20 +117,21 @@ Based on the rejections, a company will be motivated to come up with new product
 <input class = 'inputs' type = 'number' name = 'milestones'/>
 
 <h2 class='enter_val'>Did the company receive the second round of funding?</h2>
-<input class='radio' id="yes" value="yes" type="radio" name="options2" >
-<label class='radio_lab' for="yes">Yes</label>
-<input class='radio' id="no" value="no" type="radio" name="options2" >
-<label class='radio_lab' for="no">No</label>
+<input class='radio' id="yes2" value="yes2" type="radio" name="options2" >
+<label class='radio_lab' for="yes2">Yes</label>
+<input class='radio' id="no2" value="no2" type="radio" name="options2" >
+<label class='radio_lab' for="no2">No</label>
 
 
 <h2 class='enter_val'>Mention the average of participants</h2>
 <input class = 'inputs' input type="number" step="any" name = 'avg_participants'/>
 
 <h2 class='enter_val'>Is the company listed as top 500?</h2>
-<input class='radio' id="yes" value="yes" type="radio" name="options1" >
-<label class='radio_lab' for="yes">Yes</label>
-<input class='radio' id="no" value="no" type="radio" name="options1" >
-<label class='radio_lab' for="no">No</label>
+
+<input class='radio' id="yes1" value="yes1" type="radio" name="options1" >
+<label class='radio_lab' for="yes1">Yes</label>
+<input class='radio' id="no1" value="no1" type="radio" name="options1" >
+<label class='radio_lab' for="no1">No</label>
 
 <h1 class='result1'>{{ prediction_text }}</h1>
 <br>
