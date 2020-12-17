@@ -21,7 +21,23 @@ def home():
 @app.route('/predict',methods = ['POST'])
 
 def predict():
-    int_features = [float(x) for x in request.form.values() ]
+    int_features = [x for x in request.form.values() ]
+    option = request.form['options']
+    option1 = request.form['options1']
+    option2 = request.form['options2']
+    if option == 'Yes':
+        int_features[0] = 1
+    else:
+        int_features[0] = 0
+    if option1 == 'Yes':
+        int_features[7] = 1
+    else:
+        int_features[7] = 0
+    if option2 == 'Yes':
+        int_features[5] = 1
+    else:
+        int_features[5] = 0
+    final_features = [float(x) for x in int_features]
     final_features = [np.array(int_features)]
     final_features = sc.transform(final_features)
     final_features = pca.transform(final_features)

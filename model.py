@@ -20,6 +20,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.svm import SVC
+from sklearn.metrics import classification_report
 import pickle
 
 df = pd.read_csv('C:\\Users\\Shrita\\Desktop\\AI_Algo\\startup.csv')
@@ -126,7 +127,7 @@ y_pred = classifier.predict(X_test)
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
 print(accuracy_score(y_test, y_pred))
-
+print(classification_report(y_test, y_pred))
 
 accuracies = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv =10)
 print(accuracies.mean()*100)
